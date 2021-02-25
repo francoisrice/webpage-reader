@@ -1,11 +1,10 @@
-import express, { Express, Request, Response } from 'express';
+import express, { Express } from 'express';
+import { router } from './routes/router';
 
 const app: Express = express();
 const port: number = 3000;
 
-app.get('/', (req: Request, res: Response) => {
-	res.send(200);
-});
+app.use('/', router);
 
 app.listen(port, () => {
 	console.log('App is listening on port ' + port);
