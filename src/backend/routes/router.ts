@@ -1,5 +1,5 @@
 import { Router, Request, Response } from 'express';
-import { fetchAudio } from './logic';
+import { fetchAudio } from '../logic';
 
 export const router: Router = Router();
 
